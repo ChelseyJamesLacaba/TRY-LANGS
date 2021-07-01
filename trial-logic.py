@@ -12,3 +12,12 @@ def clear_button():                                               # 'clear_butto
 
 def clear_all():                                                  # 'clear_all' function clears the input field
     inputText.set(" ")
+
+def equal_button():
+    result = " "
+    try:
+        result = eval(inputText.get())                             # 'eval' function evalutes the string expression directly
+        inputText.set(result)
+    except:
+        result = "ERROR"
+        inputText.set(result)
